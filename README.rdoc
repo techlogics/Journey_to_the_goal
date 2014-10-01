@@ -1,28 +1,32 @@
-== README
+= Journey_to_the_goal(ゴールへの旅)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+== 目標管理サポートSNS
 
-Things you may want to cover:
+今までのSNSではメッセージなど直接的な交流（あるいは干渉）を主に人と人との繋がりを広げていったが、
 
-* Ruby version
+このSNSでは直接的なやりとりはせずに間接的な干渉に寄って様々な人の目標日記から刺激的な日々を得られるようにする。
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+それによって目標日記を続けられる環境を作り、目標に対する管理をユーザーが行いやすいようにする。
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+=== これからすること
+
+* 日記より単純に目標に向けた記録（一言でもなんでも）を残していく
+
+* 匿名性でpublicのタイムラインを表示
+
+* 目標地点のUI設計とアルゴリズム
+
+=== 概要・重要なこと
+
+* 基本的には個人個人の管理ツール、継続性を高める為のpublicタイムライン
+
+* 目標の定義として小さなことから大きなことまで複数作れる
+
+* 小さな目標から大きな目標までを繋げるサポート
+
+* やる気を損なわないようにするためのpublicタイムライン
+
+* public時の匿名性　→　目標は見られたくなかったりする。
+
+* 間接的な干渉　→　自分らしさが育む
