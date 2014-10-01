@@ -1,0 +1,23 @@
+
+<h2>コメント欄</h2>
+<ol>
+
+<% @post.comments.each do |comment| %>
+  <li>
+  <%= simple_format(comment.body) %>
+  <%= comment.created_at.present? ? comment.created_at.strftime("%Y/%m月/%d日(#{%w(日 月 火 水 木 金 土 日)[Time.now.wday]}) %T ") : comment.created_at %>
+  </li>
+
+<% end %>
+</ol>
+
+<h2>コメント記入</h2>
+<%= form_for([@post, @post.comments.build]) do |f| %>
+  <p>
+    <%= f.label :body %><br />
+    <%= f.text_area :body, :cols => 50, :rows => 10 %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>

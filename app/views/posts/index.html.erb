@@ -1,0 +1,21 @@
+<h1>Now posts</h1>
+
+<%= link_to 'New Post', new_post_path %>
+
+<br>
+
+<h2>Content</h2>
+<div>
+  <% @posts.each do |post| %>
+    <h3>Post: <%= post.content %></h3>
+    <ol><% post.comments.each do |comment| %>
+      <li>
+        <%= simple_format(comment.body) %>
+        <%= comment.created_at.present? ? comment.created_at.strftime("%Y/%m月/%d日(#{%w(日 月 火 水 木 金 土 日)[Time.now.wday]}) %T ") : comment.created_at %>
+        </li>
+      <% end %>
+    </ol>
+    <p><%= link_to 'Show', post %> | <%= link_to 'Edit', edit_post_path(post) %> | <%= link_to 'Destroy', post, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+</div>
+<hr>
+  <% end %>
